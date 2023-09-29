@@ -7,7 +7,7 @@ import java.io.File;
  *
  */
 public class TiposDatos {
-
+	
 	public static void main(String[] args) {		
 		//uso de la función getClass() para obtener el nombre del tipo
 		String cadena="Hola"; //String cadena = new String("Hola")
@@ -37,9 +37,9 @@ public class TiposDatos {
 		int var1=10; //variable de tipo entero
 		long var2=100; //variable de tipo entero largo
 		float var3=(float)12.456; //variable de tipo decimal simple presición
-
-		var1 = (int)var2;
-		var3 = var2;	    
+		var1 = (int)var2; //conversión explícita
+		var3 = var2;//conversión implícita
+		
 		//apartado 2	    
 		char ch = 'c';
 		int num = 88;
