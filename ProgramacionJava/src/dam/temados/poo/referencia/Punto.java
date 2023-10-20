@@ -1,11 +1,17 @@
 package dam.temados.poo.referencia;
-
+/**
+ * Ejemplos del uso de this. Distintos constructores
+ * en un tipo de datos
+ */
 public class Punto {
 	//xCoor es la coordenada en X del punto
 	//yCoor es la coordenada en Y del punto
 	private int xCoor,yCoor;
+	private static int numPuntos;
 	//constructor por defecto
-	public Punto() {}
+	public Punto() {
+		Punto.numPuntos=0;
+	}
 	/**
 	 * Constructor específico para crear un punto
 	 * con sus coordenadas x e y 
@@ -16,7 +22,7 @@ public class Punto {
 	 */
 	public Punto(int xCoor, int yCoor) {
 		this.setX(xCoor);
-		this.yCoor = yCoor;
+		this.yCoor = yCoor;			
 	}
 	public Punto(int xCoor) {
 		this.setX(xCoor);
@@ -34,13 +40,4 @@ public class Punto {
 	public void setPunto(Punto punto) {
 		punto.setX(2);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
