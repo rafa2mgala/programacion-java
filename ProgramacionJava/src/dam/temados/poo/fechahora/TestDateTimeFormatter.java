@@ -11,6 +11,8 @@ import java.time.temporal.ChronoUnit;
 
 /**
  * Ejemplos de formato de fecha y hora con DateTimeFormatter
+ * @author Rafa
+ * @version 1.0
  */
 public class TestDateTimeFormatter {
 
@@ -74,6 +76,5 @@ public class TestDateTimeFormatter {
 		LocalDateTime otherDay = LocalDateTime.of(LocalDate.now(ZoneId.of("UTC-4")), 
 				LocalTime.now(ZoneId.of("UTC-4")));
 		System.out.println(newYorkDateFormatter.format(ZonedDateTime.of(otherDay, ZoneId.of("UTC-4"))));
-		
 	}
 }
