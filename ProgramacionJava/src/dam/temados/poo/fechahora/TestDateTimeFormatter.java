@@ -31,15 +31,20 @@ public class TestDateTimeFormatter {
 		
 		//formateando fechas y horas usando regionalización
 		LocalDate anotherSummerDay = LocalDate.of(2023, 8, 23);
-		LocalTime anotherTime = LocalTime.of(13, 12, 45);
+		LocalTime anotherTime = LocalTime.of(13, 12, 45);		
+		
 		ZonedDateTime zonedDateTime = ZonedDateTime.of(anotherSummerDay, anotherTime, 
 				ZoneId.of("Europe/Madrid"));
+		
+		dtFormatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL);
+		
+		System.out.println(		  
+		  dtFormatter.format(zonedDateTime));
+		
+		dtFormatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG);
 		System.out.println(
-		  DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL)
-		  .format(zonedDateTime));
-		System.out.println(
-		  DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)
-		  .format(zonedDateTime));
+		  dtFormatter.format(zonedDateTime));
+		
 		System.out.println(
 		  DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
 		  .format(zonedDateTime));
@@ -49,7 +54,8 @@ public class TestDateTimeFormatter {
 		
 		//formateando una fecha de manera personalizada
 		String europeanDatePattern = "dd/MM/yyyy";
-		DateTimeFormatter europeanDateFormatter = DateTimeFormatter.ofPattern(europeanDatePattern);
+		DateTimeFormatter europeanDateFormatter = 
+				DateTimeFormatter.ofPattern(europeanDatePattern);
 		System.out.println(europeanDateFormatter.format(LocalDate.of(2023, 7, 31)));
 		//igual que antes pero con el nombre del mes en vez de el número
 		europeanDatePattern = "dd/LLL/yyyy";
@@ -58,8 +64,10 @@ public class TestDateTimeFormatter {
 		
 		//formateando horas de manera personalizada, se muestran los milisegundos
 		String timeColonPattern = "HH:mm:ss SSS";
-		DateTimeFormatter timeColonFormatter = DateTimeFormatter.ofPattern(timeColonPattern);
-		LocalTime colonTime = LocalTime.of(17, 35, 50).plus(329, ChronoUnit.MILLIS);
+		DateTimeFormatter timeColonFormatter = 
+				DateTimeFormatter.ofPattern(timeColonPattern);
+		LocalTime colonTime = 
+				LocalTime.of(17, 35, 50).plus(329, ChronoUnit.MILLIS);
 		System.out.println(timeColonFormatter.format(colonTime));
 		
 		//igual que antes pero con la hora del sistema
@@ -68,13 +76,15 @@ public class TestDateTimeFormatter {
 		
 		//fecha y hora en New York con formato personalizado
 		String newYorkDateTimePattern = "dd.MM.yyyy HH:mm z";
-		DateTimeFormatter newYorkDateFormatter = DateTimeFormatter.ofPattern(newYorkDateTimePattern);
-		LocalDateTime summerDay = LocalDateTime.of(2023, 7, 31, 14, 15);
+		DateTimeFormatter newYorkDateFormatter = 
+				DateTimeFormatter.ofPattern(newYorkDateTimePattern);
+		LocalDateTime summerDay = 
+				LocalDateTime.of(2023, 7, 31, 14, 15);
 		System.out.println(newYorkDateFormatter.format(ZonedDateTime.of(summerDay, ZoneId.of("UTC-4"))));
 		
 		//igual que antes pero tomando la fecha y hora de New York
 		LocalDateTime otherDay = LocalDateTime.of(LocalDate.now(ZoneId.of("UTC-4")), 
 				LocalTime.now(ZoneId.of("UTC-4")));
-		System.out.println(newYorkDateFormatter.format(ZonedDateTime.of(otherDay, ZoneId.of("UTC-4"))));
+		System.out.println(otherDay);	
 	}
 }
