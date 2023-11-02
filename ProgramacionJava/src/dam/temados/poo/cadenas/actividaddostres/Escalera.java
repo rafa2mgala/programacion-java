@@ -1,4 +1,4 @@
-package dam.temados.poo.cadenas;
+package dam.temados.poo.cadenas.actividaddostres;
 /**
  * Solución propuesta para el apartado a) de la actividad 2.3
  * @author rafa

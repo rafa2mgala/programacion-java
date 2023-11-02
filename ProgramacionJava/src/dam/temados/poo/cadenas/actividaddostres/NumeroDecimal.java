@@ -1,4 +1,4 @@
-package dam.temados.poo.cadenas;
+package dam.temados.poo.cadenas.actividaddostres;
 
 import java.text.DecimalFormat;
 import java.util.Locale;
