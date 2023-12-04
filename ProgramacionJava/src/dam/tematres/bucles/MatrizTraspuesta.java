@@ -1,6 +1,6 @@
 package dam.tematres.bucles;
 /**
- * Solución propuesta para la actividad 2.24
+ * Solución propuesta para la actividad 3.24
  * Inicializa una matriz de 3x3 con valores enteros aleatorios
  * entre 1 y 10. Después calcula la matriz traspuesta y la
  * muestra por consola
