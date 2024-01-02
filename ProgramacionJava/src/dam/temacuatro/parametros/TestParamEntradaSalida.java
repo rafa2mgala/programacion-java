@@ -4,7 +4,6 @@ package dam.temacuatro.parametros;
  * @author Rafa
  * @version 1.0
  */
-
 public class TestParamEntradaSalida {
 	public static void main(String[] args) {
 		TestParamEntradaSalida test = 
