@@ -3,6 +3,7 @@ package dam.temacuatro.estatico;
 import java.util.Random;
 
 import org.eclipse.jdt.annotation.NonNull;
+
 /**
  * Solución propuesta para la actividad 4.6. En esta clase se satisfacen los
  * requisitos del enunciado y además se trabaja con constantes, constructores
